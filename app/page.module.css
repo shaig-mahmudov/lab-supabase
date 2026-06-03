@@ -29,6 +29,102 @@
   flex: 1;
 }
 
+.controls,
+.form {
+  width: 100%;
+  max-width: 860px;
+  margin-bottom: 24px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(180px, 280px);
+  gap: 16px;
+}
+
+.form {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid rgba(62, 207, 142, 0.35);
+  border-color: #2ebf7f;
+}
+
+.wideField {
+  grid-column: 1 / -1;
+}
+
+.formActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.formActions button {
+  min-height: 42px;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+}
+
+.formActions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.formError {
+  font-size: 14px;
+  color: #c00;
+}
+
 .message {
   font-size: 16px;
   color: #666;
@@ -133,6 +229,20 @@
     padding: 32px 24px;
   }
 
+  .controls,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 18px;
+  }
+
+  .formActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
   .table th,
   .table td {
     padding: 12px 14px;
@@ -153,6 +263,28 @@
   .table {
     background: #1c1c1c;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  .form {
+    background: #1c1c1c;
+    border-color: #2a2a2a;
+  }
+
+  .form h2,
+  .field span {
+    color: #eee;
+  }
+
+  .field input,
+  .field select {
+    background: #111;
+    border-color: #333;
+    color: #eee;
+  }
+
+  .formActions button {
+    background: #3ecf8e;
+    color: #06120d;
   }
 
   .table th {
